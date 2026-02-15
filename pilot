@@ -1,0 +1,107 @@
+# VANTAGE IP — PILOT NEXT STEPS (PARAMOUNT x INSTAGRAM | STAR TREK)
+Version: v2
+
+GOAL
+Prove rights-cleared AI UGC + verification + incentives works at small scale.
+
+1. PILOT HYPOTHESIS
+
+• Users will generate higher-quality, on-brand fan content when they can pull official references via licensed API.
+• Instagram will accept/boost content when they can verify provenance (hash + registry).
+• A sponsor payment (Paramount → Instagram) can fund verification/ops and quantify ROI.
+
+2. SCOPE (KEEP IT TIGHT)
+
+• IP: Star Trek (curated pack)
+• Asset pack size: 50–200 assets (background plates, uniforms, props, logos, style frames)
+• Modality: Images only (video later)
+• User volume: 100–500 testers (invite-only)
+• Duration: 4–8 weeks
+• Regions: (define)
+
+3. MVP COMPONENTS
+A) Asset Vault (Paramount → Vantage)
+
+• Ingest + tag assets (scene/character/mood/lighting/style)
+• Attach rights metadata per asset
+• Secure storage + access controls + audit logs
+
+B) API Key Layer
+
+• Key issuance per user / per session / per asset pack (choose one)
+• Quotas + rate limits + revocation
+• Usage logs: who pulled which asset IDs, when
+
+C) Generation App (off-the-shelf model)
+
+• Model: Seed Dream (or other) behind the app
+• Reference injection: app fetches approved references via API keys
+• Output: image + manifest (asset IDs used, model version, prompt hash, timestamp)
+
+D) Provenance + Hash
+
+• Sign at generation time
+• Store in registry (pilot can be signed centralized; on-chain optional)
+• Embed metadata in file + provide server verification endpoint
+
+E) Instagram Verification
+
+• Verify: does hash exist + licensed + within pilot rules?
+• If valid: pilot badge / whitelist + tracking
+• Commercial: Paramount pays Instagram for verification/hosting as pilot
+
+4. WORKPLAN (PHASED)
+Phase 0 — Align (1 week)
+
+• Confirm pilot stakeholders at Paramount + Instagram
+• Confirm legal guardrails + content policy
+• Define success metrics + reporting
+Deliverable: signed pilot one-pager + scope + metrics
+
+Phase 1 — Asset Pack v1 (1–2 weeks)
+
+• Digitize + tag first Star Trek pack
+• Configure vault + access controls
+Deliverable: Star Trek Pack v1 + ingestion report
+
+Phase 2 — MVP Build (2–3 weeks)
+
+• API key service + logging
+• Generation app + login + paywall (if any)
+• Hash/manifest + verification endpoint
+Deliverable: end-to-end demo (generate → hash → verify)
+
+Phase 3 — Closed Beta (2–4 weeks)
+
+• Invite testers
+• Weekly reporting
+Deliverable: pilot dashboard + weekly updates
+
+Phase 4 — Decision (1 week)
+
+• Expand scope or shut down
+Deliverable: go/no-go memo + budget proposal
+
+5. SUCCESS METRICS (PICK 5–7)
+
+• Verified-post rate (% generated content verified + posted)
+• Engagement lift vs control (reach/saves/shares)
+• Brand safety incidents (target: near zero)
+• Cost per verified post
+• Time-to-generate (UX friction)
+• Repeat creators (7-day retention)
+
+6. RISKS + MITIGATIONS
+
+• Instagram integration constraints → start with whitelist + verification landing page if no API.
+• IP leakage → watermarking, audit logs, signed URLs, per-user keys, strict quotas.
+• Off-brand outputs → constraints, curated templates, rejection rules.
+
+7. IMMEDIATE NEXT 10 ACTIONS
+
+1. Name the pilot stakeholders at Paramount + Instagram.
+2. Draft and send pilot one-pager (scope + metrics + payment).
+3. Define Star Trek Pack v1 exact asset list.
+4. Choose storage/security baseline (S3 + encryption + logging).
+5. Decide API key policy (per-user vs per-session).
+6. Choose model + hosting for MVP.
